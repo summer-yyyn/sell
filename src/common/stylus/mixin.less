@@ -1,0 +1,46 @@
+.border-1px(@color){
+  position: relative;
+  &:after{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid @color;
+    content: ' ';
+  }
+}
+.border-none(){
+  &:after{
+    display: none;
+  }
+}
+.bg-image(@baseUrl){
+  background-image: url("@{baseUrl}@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image: url("@{baseUrl}@3x.png");
+  }
+}
+
+.flexP{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.flexC(@flexNum, @flexNum2){
+  -webkit-box-flex: @flexNum;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: @flexNum;         /* OLD - Firefox 19- */
+  width: @flexNum2;               /* For old syntax, otherwise collapses. */
+  -webkit-flex: @flexNum;          /* Chrome */
+  -ms-flex: @flexNum;              /* IE 10 */
+  flex: @flexNum;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.opacity(@opacityNum, @opacityNum2){
+  opacity:@opacityNum;/*css标准，支持firefox ,safari 和Opera*/
+  filter:alpha(opacity=@opacityNum2);/*为IE 6设置的，可取值在0-100之间*/
+  -moz-opacity:@opacityNum;/*为老版本的firefox设置的*/
+  -khtml-opacity:@opacityNum;/*使用khtml内核而不是webkit内核的Safafi*/
+  -webkit-opacity:@opacityNum;/*旧的Safari ,Chrome*/
+}
