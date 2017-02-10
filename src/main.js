@@ -34,4 +34,4 @@ router.map({
 
 router.start(app, '#app');
 
-router.go('/goods'); // 默认去打开goods组件
+// router.go('/goods'); // 默认去打开goods组件

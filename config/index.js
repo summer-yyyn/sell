@@ -8,13 +8,15 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    productionSourceMap: true,
+    //productionSourceMap: true, // 允许别人调试代码
+    productionSourceMap: false, // 不允许别人调试代码， 正式生产环境下不能让别人调试
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
     productionGzip: false,
-    productionGzipExtensions: ['js', 'css']
+    productionGzipExtensions: ['js', 'css'],
+    port: 9000
   },
   dev: {
     env: require('./dev.env'),

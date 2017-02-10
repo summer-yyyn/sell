@@ -5,7 +5,8 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# install dependencies.
+.0
 npm install
 
 # serve with hot reload at localhost:8080
@@ -23,5 +24,5 @@ npm run e2e
 # run all tests
 npm test
 ```
-根据慕课网vue.js高仿饿了么外卖APP视频完成
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

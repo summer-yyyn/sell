@@ -16,7 +16,7 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 
-//自定义开始
+//自定义开始  router异步借口
 var appData = require('../data.json');
 var seller = appData.seller;
 var goods = appData.goods;
